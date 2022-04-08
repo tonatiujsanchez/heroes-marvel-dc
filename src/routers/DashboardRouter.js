@@ -12,12 +12,11 @@ const DashboardRouter = () => {
         <Navbar />
         <div className="max-w-7xl mx-auto">
           <Routes>
+              <Route path="/" element={ <MarvelPage /> } />
               <Route path="marvel" element={ <MarvelPage /> } />
               <Route path="dc" element={ <DcPage /> } />
-              <Route path="hero/:id" element={ <HeroPage /> } />
+              <Route path="hero/:idHeroe" element={ <HeroPage /> } />
               <Route path="search" element={ <SearchPage /> } />
-
-              <Route path="/" element={ <MarvelPage /> } />
           </Routes>
         </div>
     </div>
