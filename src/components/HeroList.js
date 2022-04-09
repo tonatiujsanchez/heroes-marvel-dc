@@ -1,25 +1,24 @@
-import { useEffect, useState } from "react";
-import { getHeroByPublisher } from "../helpers/getHeroByPublisher"
+import { useEffect } from "react";
+import useHeroesPublisher from "../hooks/useHeroesPublisher";
 import HeroListItem from "./HeroListItem";
 
 
 
 
-
 const HeroList = ({ publisher }) => {
-
-    const [ heroes, setHeroes ] = useState([])
-
+    
+    const { heroes, getHeroesByPublisherProvider } = useHeroesPublisher()
+    
     useEffect(()=>{
-        const heroesResp = getHeroByPublisher(publisher)
-        setHeroes( heroesResp )
+        getHeroesByPublisherProvider( publisher )
     },[])
 
 
     return (
         <div className="mt-20 grid md:grid-cols-2 gap-4 lg:gap-8">
             { 
-                heroes.map( hero => <HeroListItem key={ hero.superhero } hero={ hero } /> )
+                heroes[publisher]?.length
+                && heroes[publisher].map( hero => <HeroListItem key={ hero.superhero } hero={ hero } /> )
             }
         </div>
     )

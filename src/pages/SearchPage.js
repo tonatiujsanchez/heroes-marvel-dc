@@ -20,9 +20,12 @@ const SearchPage = () => {
     })
 
     useEffect(()=>{
-        if( searchText.trim === '' ) return
-        const heroesResult = getHeroesByName(searchText.trim())
-        setHeroes(heroesResult)
+        const getHeroes = () =>{
+            if( q === '' ) return
+            const heroesResult = getHeroesByName(searchText.trim())
+            setHeroes(heroesResult)
+        }
+        getHeroes()
     },[])
 
     const handleSubmit = (e) => {
@@ -41,8 +44,8 @@ const SearchPage = () => {
     }
 
     return (
-        <div>
-            <div className="bg-white h-72 rounded-lg flex flex-col justify-center items-center max-w-[95%] mx-auto">
+        <>
+            <div className="bg-white h-72 rounded-lg flex flex-col justify-center items-center max-w-[95%] mx-auto animate__animated animate__fadeIn">
                 <h1 className="mb-5 text-5xl font-bold">Buscar Héroes</h1>
                 <form onSubmit={handleSubmit} className="w-[600px] max-w-[95%] flex flex-col md:flex-row md:border md:border-gray-300 rounded-lg">
                     <input
@@ -64,15 +67,15 @@ const SearchPage = () => {
                             </div>
                         : (q.trim() === '')
                             ? <div className="flex justify-center mt-20">
-                                <h3 className="text-3xl font-bold text-gray-300">Busca Héroes</h3>
+                                <h3 className="text-3xl font-bold text-gray-300 animate__animated animate__fadeIn">Busca Héroes</h3>
                             </div>
                             : <div className="flex justify-center mt-20">
-                                <h3 className="text-3xl font-bold text-gray-300">No se encontraron resultados</h3>
+                                <h3 className="text-3xl font-bold text-gray-300 animate__animated animate__fadeIn">No se encontraron resultados</h3>
                             </div>
                 }
             </section>
 
-        </div>
+        </>
     )
 }
 

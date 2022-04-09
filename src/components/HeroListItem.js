@@ -14,7 +14,7 @@ const HeroListItem = ({ hero }) => {
 
 
     return (
-        <div className="flex p-6 bg-white rounded-lg overflow-hidden shadow-md">
+        <div className="flex p-6 bg-white rounded-lg overflow-hidden shadow-md animate__animated animate__fadeIn">
             <div className={`flex-none w-48 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full ${ publisher === 'Marvel Comics' ? 'before:bg-red-500' : 'before:bg-blue-500' } before:rounded-md`}>
                 <img src={ imgPath } alt={ superhero } className="absolute z-10 inset-0 w-full h-full object-cover object-top rounded-lg" />
             </div>

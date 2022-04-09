@@ -2,7 +2,7 @@
 
 const HeroComics = ({ title, subtitle, desc, img, color }) => {
     return (
-        <div className="w-full md:h-[450px] rounded-lg flex flex-col md:flex-row overflow-hidden shadow-lg">
+        <div className="w-full md:h-[450px] rounded-lg flex flex-col md:flex-row overflow-hidden shadow-lg animate__animated animate__fadeIn">
             <div className="relative z-10 bg-white p-10 w-full md:w-3/6 h-[350px] md:h-auto">
                 <svg className="hidden lg:block absolute right-0 inset-y-0 h-full w-20 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
                     <polygon points="50,0 100,0 50,100 0,100" />

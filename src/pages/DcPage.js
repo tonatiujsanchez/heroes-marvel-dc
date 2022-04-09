@@ -15,13 +15,7 @@ const DcPage = () => {
 
   return (
     <div className="max-w-[95%] mx-auto">
-      <HeroComics
-        title={ HeroComicsDesc.title }
-        subtitle={ HeroComicsDesc.subtitle }
-        desc={ HeroComicsDesc.desc }
-        img={ HeroComicsDesc.img }
-        color={ HeroComicsDesc.color } />
-
+      <HeroComics { ...HeroComicsDesc } />
       <HeroList publisher={HeroComicsDesc.title} />
     </div>
 
