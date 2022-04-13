@@ -1,6 +1,5 @@
 import HeroComics from "../components/HeroComics"
 import HeroList from "../components/HeroList"
-import useHeroesPublisher from "../hooks/useHeroesPublisher"
 
 
 const HeroComicsDesc = {
@@ -13,6 +12,7 @@ const HeroComicsDesc = {
 
 
 const MarvelPage = () => {
+
   
   return (
     <div className="max-w-[95%] mx-auto">

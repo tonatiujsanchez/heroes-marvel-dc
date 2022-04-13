@@ -9,7 +9,6 @@ import { getHeroById } from "../helpers/getHeroById";
 
 const HeroPage = () => {
 
-
     const navigate = useNavigate()
     const { idHeroe } = useParams()
     
@@ -30,8 +29,8 @@ const HeroPage = () => {
 
     return (
         <div className="max-w-[95%] w-[940px] mx-auto grid md:grid-cols-2 gap-10 ">
-            <div className="mx-auto md:ml-auto">
-                <img className="rounded-lg shadow-lg animate__animated animate__fadeInLeftBig" src={imgPath} alt={heroe.superhero} />
+            <div className="mx-auto md:ml-auto animate__animated animate__bounceInLeft">
+                <img className="rounded-lg shadow-lg" src={imgPath} alt={heroe.superhero} />
             </div>
             <div>
                 <h1 className="text-4xl font-bold">{heroe.superhero}</h1>

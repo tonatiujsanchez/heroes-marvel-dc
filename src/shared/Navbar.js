@@ -1,11 +1,17 @@
 import { NavLink, useNavigate } from "react-router-dom"
+import useAuth from "../hooks/useAuth"
+import { types } from "../types/types"
 
 
 const Navbar = () => {
 
+    const { user, dispatch } = useAuth()
     const navigate = useNavigate()
 
     const handleSesion = () =>{
+
+        dispatch({ type: types.logout })
+
         navigate('/login',{
             replace: true
         })
@@ -23,7 +29,7 @@ const Navbar = () => {
                         className={ ({ isActive })=>`${isActive ? 'text-gray-900': 'text-gray-500'} uppercase font-semibold hover:text-gray-700` }>Buscar</NavLink>
                 </div>
                 <div className="flex items-center gap-5">
-                    <a href="#" className="text-gray-700 uppercase font-semibold">Brandon</a>
+                    <p className="text-gray-700 uppercase font-semibold">{ user.name }</p>
                     <button onClick={ handleSesion }
                         className="uppercase font-semibold bg-red-600 border-2 border-red-600 hover:bg-white hover:text-red-600 text-white px-5 py-1 rounded-lg">Logout</button>
                 </div>
