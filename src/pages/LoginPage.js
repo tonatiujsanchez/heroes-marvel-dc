@@ -17,7 +17,8 @@ const LoginPage = () => {
       }
     })
 
-    navigate('/',{
+    const lastPath = localStorage.getItem('heroes_tailwind_pathname') || '/marvel'
+    navigate( lastPath, {
       replace: true
     })
 
