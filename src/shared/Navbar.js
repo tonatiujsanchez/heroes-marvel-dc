@@ -12,7 +12,7 @@ const Navbar = () => {
 
         dispatch({ type: types.logout })
 
-        navigate('/login',{
+        navigate('/auth/login',{
             replace: true
         })
     }

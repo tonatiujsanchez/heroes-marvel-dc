@@ -11,7 +11,7 @@ const PublicRoute = ({ children }) => {
 
     return (
         user.logged
-            ? <Navigate to={ pathname } />
+            ? <Navigate replace to={pathname} />
             : children
     )
 }

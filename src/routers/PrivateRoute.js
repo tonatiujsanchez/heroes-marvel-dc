@@ -9,12 +9,14 @@ const PrivateRoute = ({ children }) => {
     const { user } = useAuth()
     const { pathname, search } = useLocation()
 
-    localStorage.setItem( 'heroes_tailwind_pathname', pathname + search )
-     
+    if(user.logged){
+        localStorage.setItem( 'heroes_tailwind_pathname', pathname + search )
+    }
+
     return (
         user.logged
             ? children
-            : <Navigate to="/login" />
+            : <Navigate replace to="/auth/login" />
     )
 }
 

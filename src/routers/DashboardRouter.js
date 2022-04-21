@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 
 // Shared
 import Navbar from "../shared/Navbar"
@@ -17,7 +17,8 @@ const DashboardRouter = () => {
                 <Navbar />
                 <div className="max-w-7xl mx-auto">
                     <Routes>
-                        <Route path="/" element={<MarvelPage />} />
+                        <Route path="*" element={ <Navigate replace to="marvel" /> } />
+                        <Route path="/" element={ <Navigate replace to="marvel" /> } />
                         <Route path="marvel" element={<MarvelPage />} />
                         <Route path="dc" element={<DcPage />} />
                         <Route path="hero/:idHeroe" element={<HeroPage />} />

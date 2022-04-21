@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import LoginPage from "../pages/LoginPage"
+import AuthRoute from "./AuthRoute"
 import DashboardRouter from "./DashboardRouter"
 import PrivateRoute from "./PrivateRoute"
 import PublicRoute from "./PublicRoute"
@@ -10,9 +11,9 @@ const AppRouter = () => {
         <BrowserRouter>
             <Routes>
                 {/* <Route path='/login' element={ <LoginPage /> }  /> */}
-                <Route path='/login' element={ 
+                <Route path='/auth/*' element={ 
                     <PublicRoute>
-                        <LoginPage /> 
+                        <AuthRoute />
                     </PublicRoute>
                 }/>
 
