@@ -56,7 +56,8 @@ const LoginPage = () => {
             paylod: user
         })
 
-        const lastPath = localStorage.getItem('heroes_tailwind_pathname') || '/marvel'
+        const pathameKey = `heroes_tailwind_pathname_${user.email}`
+        const lastPath = localStorage.getItem(pathameKey) || '/marvel'
         navigate(lastPath, {
             replace: true
         })

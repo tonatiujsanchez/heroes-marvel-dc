@@ -9,8 +9,9 @@ const PrivateRoute = ({ children }) => {
     const { user } = useAuth()
     const { pathname, search } = useLocation()
 
+    const pathameKey = `heroes_tailwind_pathname_${user.email}`
     if(user.logged){
-        localStorage.setItem( 'heroes_tailwind_pathname', pathname + search )
+        localStorage.setItem( pathameKey, pathname + search )
     }
 
     return (

@@ -7,7 +7,9 @@ import useAuth from "../hooks/useAuth"
 const PublicRoute = ({ children }) => {
 
     const { user } = useAuth()
-    const pathname = localStorage.getItem('heroes_tailwind_pathname') || '/marvel'
+    
+    const pathameKey = `heroes_tailwind_pathname_${user.email}`
+    const pathname = localStorage.getItem(pathameKey) || '/marvel'
 
     return (
         user.logged
