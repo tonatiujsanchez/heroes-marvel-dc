@@ -1,8 +1,10 @@
 import { types } from "../types/types";
 
 // const state = {
-//     name: 'Brandon',
-//     logged: true
+    // id: 1650584111723
+    // name: "Brandon"
+    // email: "brandon@gmail.com"
+    // password: "123456"
 // }
 
 

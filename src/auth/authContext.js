@@ -4,7 +4,7 @@ import { authReducer } from "./authReducer";
 const AuthContext = createContext()
 
 
-const keyStorage = 'heroes_tailwind_1649855345628'
+const keyStorage = 'user_heroes_tailwind_1649855345628'
 
 const init = () =>{
     return JSON.parse( localStorage.getItem( keyStorage ) ) || { logged: false }
