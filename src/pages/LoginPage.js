@@ -79,7 +79,7 @@ const LoginPage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center">
-            <form onSubmit={handleSesion} className="mb-10">
+            <form onSubmit={handleSesion} className="mb-10 mx-3">
                 <h1 className="text-white text-4xl font-semibold uppercase text-center mb-12">Iniciar Sesión</h1>
                 <div className="mb-5">
                     <label className="text-white font-semibold mb-2 inline-block text-xl">Correo Electrónico:</label>
@@ -88,7 +88,7 @@ const LoginPage = () => {
                         name="email"
                         value={email}
                         onChange={onChangeInput}
-                        className="w-full bg-gray-100 rounded-md px-3 py-3 placeholder:text-xl"
+                        className="w-full bg-gray-100 rounded-md px-3 py-3 text-xl"
                         placeholder="ejemplo@email.com" />
                 </div>
                 <div className="mb-5">
@@ -98,7 +98,7 @@ const LoginPage = () => {
                         name="password"
                         value={password}
                         onChange={onChangeInput}
-                        className="w-full bg-gray-100 rounded-md px-3 py-3 placeholder:text-xl"
+                        className="w-full bg-gray-100 rounded-md px-3 py-3 text-xl"
                         placeholder="Contraseña" />
                 </div>
                 <button

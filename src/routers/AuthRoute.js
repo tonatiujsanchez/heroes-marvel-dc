@@ -16,7 +16,7 @@ const AuthRoute = () => {
 
     return (
         <div className="grid md:grid-cols-12">
-            <section className="md:col-span-7">
+            <section className="hidden md:block md:col-span-7">
                 <Swiper
                     loop={true}
                     autoplay={{
@@ -24,12 +24,12 @@ const AuthRoute = () => {
                         disableOnInteraction: false,
                     }}
                     modules={[Autoplay]}
-                    className="mySwiper">
+                >
                     {
                         heroesSlider.map( hero => {
                             return(
-                                <SwiperSlide key={hero.name}>
-                                    <div>
+                                <SwiperSlide key={hero.name} className="bg-gray-100">
+                                    <div className="max-w-[600px]">
                                         <img className="w-full" src={ hero.url } alt={ hero.name } />
                                     </div>
                                 </SwiperSlide>

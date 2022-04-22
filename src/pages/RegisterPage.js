@@ -91,7 +91,7 @@ const RegisterPage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center">
-            <form onSubmit={handleRegistro}>
+            <form onSubmit={handleRegistro} className="mx-3">
                 <h1 className="text-white text-4xl font-semibold uppercase text-center mb-12">Crear cuenta</h1>
                 <div className="mb-5">
                     <label className="text-white font-semibold mb-2 inline-block text-xl">Nombre:</label>
